@@ -28,7 +28,7 @@
         /*visibility: hidden;*/
     }
     /*#home{
-        visibility: hidden;   
+        visibility: hidden;
     }*/
     .col-lg-12 h1{
         font-weight: bold;
@@ -46,7 +46,7 @@
     }
     .hlink{
         margin-left: 50px;
-        margin-top: 20px;   
+        margin-top: 20px;
     }
     .col-lg-12 ul li{
         font-size: 20px;
@@ -76,32 +76,31 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="home()">Home</a>
+                    <a class="link highlight" id="init" href="#" onclick="home()">Home</a>
                 </li>
                 <li>
-                    <a href="#" onclick="conf()">About Conference</a>
+                    <a class="link" href="#" onclick="conf()">About Conference</a>
                 </li>
                 <li>
-                    <a href="#" onclick="clg()">About College</a>
+                    <a class="link" href="#" onclick="clg()">About College</a>
                 </li>
                 <li>
-                    <a href="#" onclick="papers()">Call for Papers</a>
+                    <a class="link" href="#" onclick="papers()">Call for Papers</a>
                 </li>
                 <li>
-                    <a href="#" onclick="reg()">Registration</a>
+                    <a class="link" href="#" onclick="reg()">Registration</a>
                 </li>
                 <li>
-                    <a href="#" onclick="contact()">Contact Details</a>
+                    <a class="link" href="#" onclick="contact()">Contact Details</a>
                 </li>
                 <li>
-                    <a href="#" onclick="imp()">Important Dates</a>
+                    <a class="link" href="#" onclick="imp()">Important Dates</a>
                 </li>
-                
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
-        
+
 
         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
 
@@ -109,7 +108,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            
+
              <div id="home" class="container-fluid">
                 <div class="row">
                     <center>
@@ -124,7 +123,6 @@
                         <h2>UNIVSERSITY COLLEGE OF ENGINEERING KAKINADA,</h2>
                         <h2>JNTUK KAKINADA</h2>
                         <h2>EAST GODAVARI DIST., AP 533003</h2>
-                    
                     </div>
                     </center>
                 </div>
@@ -275,7 +273,7 @@
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-        
+
     </div>
     <!-- /#wrapper -->
 
@@ -294,36 +292,39 @@
     $(document).ready(function(){
         hideAll();
         home();
-        
+        var $links = $('.link').click(function(e){
+        $links.removeClass('highlight');
+        $(this).addClass('highlight');
+    });
     })
     function home(){
         hideAll();
         document.getElementById("home").hidden=false;
 
-    }  
+    }
     function conf(){
         hideAll();
         document.getElementById("conf").hidden = false;
     }
     function papers(){
         hideAll();
-        document.getElementById("papers").hidden = false;   
+        document.getElementById("papers").hidden = false;
     }
     function reg(){
         hideAll();
-        document.getElementById("reg").hidden = false;   
+        document.getElementById("reg").hidden = false;
     }
     function contact(){
         hideAll();
-        document.getElementById("contact").hidden = false;   
+        document.getElementById("contact").hidden = false;
     }
     function imp(){
         hideAll();
-        document.getElementById("imp").hidden = false;   
+        document.getElementById("imp").hidden = false;
     }
     function clg(){
         hideAll();
-        document.getElementById("clg").hidden = false;   
+        document.getElementById("clg").hidden = false;
     }
     function hideAll(){
         var c = document.getElementsByClassName('container-fluid');
@@ -332,7 +333,7 @@
         }
     }
     </script>
-
+    <script src="js/prashant.js" type="text/javascript"></script>
 </body>
 
 </html>
